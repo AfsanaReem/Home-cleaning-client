@@ -3,7 +3,6 @@ import ServiceTab from './ServiceTab';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    console.log(services);
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
