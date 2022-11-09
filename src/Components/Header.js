@@ -24,6 +24,7 @@ const Header = () => {
                         <li><a href='/services'>Services</a></li>
                         <li><a href='/review'>Customer Reviews</a></li>
                         <li><a href='/blog'>Blog</a></li>
+                        <li><a href='/faq'>FAQ</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
