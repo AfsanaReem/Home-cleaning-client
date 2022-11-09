@@ -27,7 +27,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href='/' className="btn">Get started</a>
+                    <a href='/' className="btn btn-primary">Get started</a>
                 </div>
             </div>
         </div>
