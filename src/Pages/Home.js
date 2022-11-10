@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HomeTab from '../Components/HomeTab';
 import Services from '../Components/Services';
+import FAQ from './FAQ';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
                 </Link>
             </div>
             <br />
+            <FAQ></FAQ>
 
         </div>
     );

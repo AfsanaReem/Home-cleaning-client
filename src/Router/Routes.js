@@ -6,6 +6,8 @@ import Services from "../Components/Services";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home";
 import FAQ from "../Pages/FAQ";
+import Login from "../Pages/Login";
+import Signup from "../Pages/Signup";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
             {
                 path: '/faq',
                 element: <FAQ></FAQ>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <Signup></Signup>
             }
         ]
 
