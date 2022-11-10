@@ -39,7 +39,7 @@ const Login = () => {
                 navigate(from, { replace: true });
 
                 // get jwt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://home-cleaning-service-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -6,7 +6,7 @@ const AllServices = () => {
     useTitle('All Services')
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allservices')
+        fetch('https://home-cleaning-service-server.vercel.app/allservices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);

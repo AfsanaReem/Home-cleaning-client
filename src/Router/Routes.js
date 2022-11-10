@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Blog from "../Pages/Blog";
 import Details from "../Pages/Details";
 import Review from "../Pages/Review";
-import Services from "../Components/Services";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home";
 import FAQ from "../Pages/FAQ";
@@ -39,7 +38,7 @@ const router = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <Details></Details>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://home-cleaning-service-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/faq',
@@ -60,12 +59,12 @@ const router = createBrowserRouter([
             {
                 path: '/addreview/:id',
                 element: <PrivateRoute><AddReview></AddReview></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://home-cleaning-service-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/updatereview/:id',
                 element: <PrivateRoute><UpdateReview></UpdateReview></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://home-cleaning-service-server.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/myreview',

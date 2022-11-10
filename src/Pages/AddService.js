@@ -17,7 +17,7 @@ const AddService = () => {
             title, price, img, details, email, date
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://home-cleaning-service-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

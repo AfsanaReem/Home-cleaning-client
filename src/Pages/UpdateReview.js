@@ -21,7 +21,7 @@ const UpdateReview = () => {
             title, price, img, review, email, date
         }
 
-        fetch(`http://localhost:5000/reviews/${_id}`, {
+        fetch(`https://home-cleaning-service-server.vercel.app/reviews/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
