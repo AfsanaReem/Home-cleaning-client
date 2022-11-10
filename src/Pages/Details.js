@@ -1,10 +1,12 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../Components/useTitle';
 
 const Details = () => {
     const service = useLoaderData();
     const { img, title, price, details } = service;
+    useTitle('Details');
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">

@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../Components/useTitle';
 
 const FAQ = () => {
+    useTitle('FAQ')
     return (
         <div className='mx-72'>
             <div className="collapse collapse-arrow">

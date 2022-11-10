@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HomeTab from '../Components/HomeTab';
 import Services from '../Components/Services';
+import useTitle from '../Components/useTitle';
 import FAQ from './FAQ';
 
 const Home = () => {
+    useTitle('Home')
     return (
         <div>
             <HomeTab></HomeTab>
