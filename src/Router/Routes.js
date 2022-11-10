@@ -8,6 +8,7 @@ import Home from "../Pages/Home";
 import FAQ from "../Pages/FAQ";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/review',
-                element: <Review></Review>
+                element: <PrivateRoute><Review></Review></PrivateRoute>
             },
             {
                 path: '/blog',
