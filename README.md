@@ -18,6 +18,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Live link of the project
 
-Click on the below link to check out.: [https://home-cleaning-service-server.vercel.app]
+Click on the below link to check out.: [https://home-cleaning-service-8f8a8.web.app]
 Vercel Link.: [https://home-cleaning-service-server.vercel.app]
 
