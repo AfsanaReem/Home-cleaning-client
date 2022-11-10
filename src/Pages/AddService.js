@@ -3,6 +3,7 @@ import { AuthContext } from '../contexts/AuthProvider';
 
 const AddService = () => {
     const { user } = useContext(AuthContext);
+    const date = new Date();
     const handleAddService = event => {
         event.preventDefault();
         const form = event.target;
@@ -13,7 +14,7 @@ const AddService = () => {
         const email = user?.email || 'unregistered';
 
         const newService = {
-            title, price, img, details, email
+            title, price, img, details, email, date
         }
 
         fetch('http://localhost:5000/services', {
@@ -35,7 +36,6 @@ const AddService = () => {
             })
             .catch(er => console.error(er));
 
-        console.log(title, price, img, details, email);
     }
     return (
         <div>

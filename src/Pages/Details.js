@@ -1,11 +1,11 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import useTitle from '../Components/useTitle';
 
 const Details = () => {
     const service = useLoaderData();
-    const { img, title, price, details } = service;
+    const { _id, img, title, price, details } = service;
     useTitle('Details');
     return (
         <div>
@@ -17,7 +17,7 @@ const Details = () => {
                         <br />
                         <p>Price: {price} Taka</p>
                         <p className="py-6">{details}</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <Link to={`/addreview/${_id}`}><button className="btn btn-primary">Add review</button></Link>
                     </div>
                 </div>
             </div>
