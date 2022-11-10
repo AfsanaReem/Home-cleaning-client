@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyReviewTab = ({ myRev, handleDelete }) => {
     const { img, review, title, email, price, _id, date } = myRev;
@@ -16,6 +17,7 @@ const MyReviewTab = ({ myRev, handleDelete }) => {
                     <p>Time: {date}</p>
                     <div className="card-actions">
                         <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete</button>
+                        <Link to={`/updatereview/${_id}`}><button className="btn btn-primary">Update</button></Link>
                     </div>
                 </div>
             </div>

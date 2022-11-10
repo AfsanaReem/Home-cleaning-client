@@ -17,12 +17,12 @@ const MyReview = () => {
     }, [user?.email]);
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure, you want to cancel this order');
+        const proceed = window.confirm('Are you sure, you want to delete this review?');
         if (proceed) {
             fetch(`http://localhost:5000/reviews/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                    authorization: `Bearer ${localStorage.getItem('home-token')}`
                 }
             })
                 .then(res => res.json())
