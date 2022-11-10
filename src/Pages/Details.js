@@ -37,10 +37,9 @@ const Details = () => {
                 <h2 className=' text-center text-4xl'>This service have {serviceReviews.length} reviews</h2>
                 <div className=' text-center grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-3'>
                     {
-                        serviceReviews.map(serRev => <ServiceReview key={serRev._id}
-                            serRev={serRev}
-                        >
-
+                        serviceReviews.map(serRev => <ServiceReview
+                            key={serRev._id}
+                            serRev={serRev}>
                         </ServiceReview>)
                     }
                 </div>

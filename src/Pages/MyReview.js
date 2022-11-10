@@ -37,7 +37,13 @@ const MyReview = () => {
     }
     return (
         <div>
-            <h2 className=' text-center text-4xl'>You have {myReviews.length} reviews</h2>
+            {
+                myReviews.length === 0 ?
+                    <h2 className=' text-center text-4xl mt-60 mb-96'>No reviews were added</h2>
+                    :
+                    <h2 className=' text-center text-4xl'>You have {myReviews.length} reviews</h2>
+            }
+
             <div className=' text-center grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-3'>
                 {
                     myReviews.map(myRev => <MyReviewTab key={myRev._id}

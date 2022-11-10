@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MyReviewTab = ({ myRev, handleDelete }) => {
-    const { img, review, title, email, price, _id } = myRev;
+    const { img, review, title, email, price, _id, date } = myRev;
     return (
         <div>
             <div className="card w-96 h-90 bg-base-100 shadow-xl">
@@ -13,6 +13,7 @@ const MyReviewTab = ({ myRev, handleDelete }) => {
                     <h2 className="card-title">Service: {title}</h2>
                     <p>{price} Taka</p>
                     <p>Review: {review}</p>
+                    <p>Time: {date}</p>
                     <div className="card-actions">
                         <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete</button>
                     </div>

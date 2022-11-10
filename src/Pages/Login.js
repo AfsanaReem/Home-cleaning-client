@@ -36,22 +36,23 @@ const Login = () => {
                     email: user.email
                 }
                 console.log(currentUser);
+                navigate(from, { replace: true });
 
                 // get jwt token
-                // fetch('http://localhost:5000/jwt', {
-                //     method: 'POST',
-                //     headers: {
-                //         'content-type': 'application/json'
-                //     },
-                //     body: JSON.stringify(currentUser)
-                // })
-                //     .then(res => res.json())
-                //     .then(data => {
-                //         console.log(data);
-                //         // local storage is the easiest but not the best place to store jwt token
-                //         localStorage.setItem('genius-token', data.token);
-                //         navigate(from, { replace: true });
-                //     });
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        // local storage is the easiest but not the best place to store jwt token
+                        localStorage.setItem('home-token', data.token);
+                        navigate(from, { replace: true });
+                    });
 
             })
             .catch(error => console.log(error));
@@ -71,19 +72,19 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" className="input input-bordered" />
+                                <input name='email' type="email" placeholder="email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" className="input input-bordered" />
+                                <input name='password' type="password" placeholder="password" className="input input-bordered" />
                                 <label className="label">New user?
                                     <a href="/signup" className="label-text-alt link link-hover">Sign Up</a>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button type='submit' className="btn btn-primary">Login</button>
+                                <input type='submit' className="btn btn-primary" value="Login"></input>
                                 <br />
                                 <button onClick={handleGoogleSignIn} className="btn btn-primary">Login with Google</button>
                             </div>
