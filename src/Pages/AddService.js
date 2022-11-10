@@ -28,7 +28,7 @@ const AddService = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Order placed successfully')
+                    alert('Service added successfully')
                     form.reset();
 
                 }

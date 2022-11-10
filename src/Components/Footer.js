@@ -3,12 +3,32 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
+            <div className="modal" id="my-modal-2">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg">About us</h3>
+                    <p className="py-4">Home Cleaning Service is a professional cleaning service provider in Bangladesh. We also provide water tank cleaning services in Bangladesh and we provide septic tank cleaning services in Bangladesh. Moreover, we provide all kinds of cleaning services.</p>
+                    <div className="modal-action">
+                        <a href="#" className="btn">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div className="modal" id="my-modal-3">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg">Contact Us</h3>
+                    <p className="py-4">Mobile: +8801961-534 040<br />
+                        Telephone: 02-2222 93345
+                        <br />
+                        Email: homecleaningservice@gmail.com</p>
+                    <div className="modal-action">
+                        <a href="#" className="btn">Close</a>
+                    </div>
+                </div>
+            </div>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
                 <div className="grid grid-flow-col gap-4">
-                    <a href='/' className="link link-hover">About us</a>
-                    <a href='/' className="link link-hover">Contact</a>
-                    <a href='/' className="link link-hover">Jobs</a>
-                    <a href='/' className="link link-hover">Press kit</a>
+                    <a href="#my-modal-2" className="link link-hover">About us</a>
+                    <a href="#my-modal-3" className="link link-hover">Contact</a>
+                    <a href='/services' className="link link-hover">Our Services</a>
                 </div>
                 <div>
                     <div className="grid grid-flow-col gap-4">
@@ -18,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright © 2022 - All right reserved by Home Cleaning Service Ltd</p>
                 </div>
             </footer>
         </div>
