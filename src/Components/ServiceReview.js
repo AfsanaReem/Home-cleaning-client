@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ReviewTab = ({ rev }) => {
-    const { img, review, title, email, price } = rev;
+const ServiceReview = ({ serRev }) => {
+    const { img, review, title, email, price } = serRev;
     return (
         <div>
             <div className="card w-96 h-90 bg-base-100 shadow-xl">
@@ -19,4 +19,4 @@ const ReviewTab = ({ rev }) => {
     );
 };
 
-export default ReviewTab;
+export default ServiceReview;

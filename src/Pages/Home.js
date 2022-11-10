@@ -4,6 +4,7 @@ import HomeTab from '../Components/HomeTab';
 import Services from '../Components/Services';
 import useTitle from '../Components/useTitle';
 import FAQ from './FAQ';
+import Review from './Review';
 
 const Home = () => {
     useTitle('Home')
@@ -20,6 +21,8 @@ const Home = () => {
             </div>
             <br />
             <FAQ></FAQ>
+            <br />
+            <Review></Review>
 
         </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ReviewTab = ({ rev }) => {
-    const { img, review, title, email, price } = rev;
+const MyReviewTab = ({ myRev, handleDelete }) => {
+    const { img, review, title, email, price, _id } = myRev;
     return (
         <div>
             <div className="card w-96 h-90 bg-base-100 shadow-xl">
@@ -13,10 +13,14 @@ const ReviewTab = ({ rev }) => {
                     <h2 className="card-title">Service: {title}</h2>
                     <p>{price} Taka</p>
                     <p>Review: {review}</p>
+                    <div className="card-actions">
+                        <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete</button>
+                    </div>
                 </div>
             </div>
+
         </div>
     );
 };
 
-export default ReviewTab;
+export default MyReviewTab;

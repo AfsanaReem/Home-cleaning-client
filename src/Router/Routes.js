@@ -11,6 +11,7 @@ import Signup from "../Pages/Signup";
 import PrivateRoute from "./PrivateRoute";
 import AddService from "../Pages/AddService";
 import AddReview from "../Pages/AddReview";
+import MyReview from "../Pages/MyReview";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
                 path: '/addreview/:id',
                 element: <AddReview></AddReview>,
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+            },
+            {
+                path: '/myreview',
+                element: <MyReview></MyReview>
             }
         ]
 
